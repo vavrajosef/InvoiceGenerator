@@ -12,6 +12,9 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    // https://mvnrepository.com/artifact/com.github.librepdf/openpdf
+    implementation("com.github.librepdf:openpdf:1.3.30")
+
 }
 
 tasks.test {
