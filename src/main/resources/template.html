@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>Invoice</title>
+    <meta name="Invoice" content="Auto generated invoice" />
+    <link rel="stylesheet" type="text/css" href="template.css">
+</head>
+<body>
+<page size="A4">
+    <div class="container no-flex">
+        <div class="flex-1">${name}</div>
+        <div class="right flex-1">${detail}</div>
+    </div>
+<div class="soft-border container-col flex-1">
+    <div class="container flex-7">
+        <div class="flex-1 container-col soft-border">
+            <div class="flex-3 soft-border">
+                <p class="pad-15 helv">
+                    ${sender.name}<br>
+                    ${sender.address1}<br>
+                    ${sender.address2}
+                </p>
+            </div>
+            <div  class="flex-5 soft-border font-14">
+                <p class="pad-15 helv">
+                    <b>IČ: ${sender.id}</b><br>
+                    <b>DIČ: ${sender.did}</b><br>
+                    Mobil: ${sender.phone}<br>
+                    E-mail: ${sender.email}
+                </p>
+            </div>
+            <div  class="flex-1 thick-border container">
+                <div class="flex-2 pad-5 font-10 helv">Číslo účtu:</div>
+                <div class="flex-3 right border-right">${sender.account}</div>
+                <div class="flex-1">${sender.bank}</div>
+            </div>
+            <div class="flex-3 container">
+                <div class="flex-3 container-col">
+                    <p class="helv font-11 flex-1">
+                        Datum vystavení:</p>
+                    <p class="helv font-11 flex-1">
+                        Datum splatnosti:</p>
+                    <p class="helv font-11 flex-1">
+                        Datum uskutečnění plnění:</p>
+                    <p class="helv font-11 flex-1">
+                        Forma úhrady:
+                        </p>
+                    </p>
+                </div>
+                <div class="flex-2 container-col">
+                    <p class="helv font-11 soft-border date-margin flex-1">
+                        ${issuedate}
+                    </p>
+                    <p class="helv font-11 soft-border date-margin flex-1">
+                        ${duedate}</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">
+                        ${date3}</p>
+                    <p class="helv font-11 t-center flex-1">
+                        Převodem
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 right soft-border container-col">
+            <div class="flex-1 container symbol-margin">
+                <div class="flex-1 left container-col">
+                    <p class="helv font-12 flex-1">
+                        Variabilní symbol:
+                    </p>
+                    <p class="helv font-12 flex-1">
+                        Konstantní symbol:
+                    </p>
+                </div>
+                <div class="flex-1 right container-col symbol-margin">
+                    <p class="helv font-12 flex-1">
+                        ${varsymbol}
+                    </p>
+                    <p class="helv font-12 flex-1">
+                        ${konstsymbol}
+                    </p>
+                </div>
+
+            </div>
+            <div class="flex-5 thick-border"></div>
+        </div>
+    </div>
+    <div class="flex-3 soft-border">
+adsf
+    </div>
+    <div class="flex-7 soft-border">
+asfd
+    </div>
+    <div class="flex-3 soft-border">
+        body {
+        background: rgb(204,204,204);
+        }
+        page[size="A4"] {
+        background: white;
+        width: 21cm;
+        height: 29.7cm;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+        }
+        @media print {
+        body, page[size="A4"] {
+        margin: 0;
+        box-shadow: 0;
+        }
+        }
+    </div>
+</div>
+</page>
+</body>
+</html>

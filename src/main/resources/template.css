@@ -1,0 +1,131 @@
+body {
+  background: rgb(204,204,204);
+}
+page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+}
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-flex {
+    flex:0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.soft-border, .thick-border {
+    border: solid black;
+}
+
+.soft-border {
+    border-width: thin;
+}
+
+.thick-border {
+    border-width: thick;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.helv {
+    font-family: Helvetica;
+}
+
+.pad-15 {
+    padding: 15px;
+}
+
+.pad-5 {
+    padding: 5px;
+}
+
+.font-10 {
+    font-size: 10;
+}
+
+.font-11 {
+    font-size: 11;
+}
+
+.font-12 {
+    font-size: 12;
+}
+
+.font-14 {
+    font-size: 14;
+}
+
+.border-right {
+    border-right: solid black;
+    border-width: thin;
+}
+
+.debug {
+    background-color: red;
+}
+
+.date-margin {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    vertical-align: middle;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.symbol-margin {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
