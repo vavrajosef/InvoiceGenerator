@@ -33,31 +33,29 @@
                 <div class="flex-3 right border-right">${sender.account}</div>
                 <div class="flex-1">${sender.bank}</div>
             </div>
-            <div class="flex-3 container">
-                <div class="flex-3 container-col">
+            <div class="flex-3 container-col">
+                <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum vystavení:</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${issuedate}</p>
+                </div>
+                <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum splatnosti:</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${duedate}</p>
+                </div>
+                <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum uskutečnění plnění:</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${date3}</p>
+                </div>
+                <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Forma úhrady:
                         </p>
-                    </p>
+                    <p class="helv font-11 t-center flex-1">Převodem</p>
                 </div>
-                <div class="flex-2 container-col">
-                    <p class="helv font-11 soft-border date-margin flex-1">
-                        ${issuedate}
-                    </p>
-                    <p class="helv font-11 soft-border date-margin flex-1">
-                        ${duedate}</p>
-                    <p class="helv font-11 soft-border date-margin flex-1">
-                        ${date3}</p>
-                    <p class="helv font-11 t-center flex-1">
-                        Převodem
-                    </p>
-                </div>
+
             </div>
         </div>
         <div class="flex-1 right soft-border container-col">
@@ -80,13 +78,79 @@
                 </div>
 
             </div>
-            <div class="flex-5 thick-border"></div>
+            <div class="flex-5 thick-border container-col">
+                <div class="flex-1 container">
+                    <div class="flex-1">
+                        <p class="helv font-12 t-center">Odběratel:</p>
+                    </div>
+                    <div class="flex-1">
+                        <p class="helv font-12 left">IČ</p>
+                        <p class="helv font-12 left">DIČ</p>
+                    </div>
+                    <div class="flex-1">
+                        <p class="helv font-12 left">${receiver.id}</p>
+                        <p class="helv font-12 left">${receiver.did}</p>
+                    </div>
+                </div>
+                <div class="flex-3">
+                    <p class="left helv pad-10-left"><b>${receiver.name}</b></p>
+                    <p class="left helv pad-10-left"><b>${receiver.address1}</b></p>
+                    <p class="left helv pad-10-left"><b>${receiver.address2}</b></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="flex-3 soft-border">
-adsf
+    <div class="flex-5 soft-border container-col">
+        <div class="flex-1 soft-border container">
+            <div class="flex-1">
+                <p class="helv font-12 pad-10-left">
+                    Označení dodávky
+                </p>
+            </div>
+            <div class="flex-1 container">
+
+            </div>
+        </div>
+        <div class="flex-7 container">
+            <div class="flex-1">
+                <p class="helv font-15 pad-15">
+                    ${invoice.text}
+                </p>
+            </div>
+            <div class="flex-1 container-col">
+                <div class="flex-1"></div>
+                <div class="flex-3"></div>
+            </div>
+        </div>
+        <div class="flex-3 container soft-border">
+            <div class="flex-1 container-col">
+                <div class="helv font-12 pad-5 pad-10-left flex-1">
+                    Součet
+                </div>
+                <div class="helv font-12 pad-10-left flex-1">
+                    <b>CELKEM K ÚHRADĚ</b>
+                </div>
+            </div>
+            <div class="flex-1 container">
+                <div class="flex-1 container-col">
+                    <div class="helv font-15 pad-5 pad-10-left flex-1 container">
+                        <div class="flex-1 font-12">${price.totalbefore}</div>
+                        <div class="flex-1"></div>
+                        <div class="flex-1 font-12">${price.vattotal}</div>
+                        <div class="flex-1 font-12">${price.total}</div>
+                    </div>
+                    <div class="helv font-15 pad-10-left flex-1 container">
+                        <div class="flex-1"></div>
+                        <div class="flex-1"></div>
+                        <div class="flex-1"></div>
+                        <div class="flex-1 left font-12"><b>${price.total}</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="flex-7 soft-border">
+    <div class="flex-3 soft-border">
 asfd
     </div>
     <div class="flex-3 soft-border">

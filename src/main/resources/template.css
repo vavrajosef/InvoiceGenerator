@@ -115,9 +115,9 @@ page[size="A4"] {
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    vertical-align: middle;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 5px 0;
 }
 
 .t-center {
@@ -128,4 +128,9 @@ page[size="A4"] {
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.pad-10-left {
+    padding-left: 10px;
+}
+
 
