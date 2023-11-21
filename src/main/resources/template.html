@@ -37,17 +37,17 @@
                 <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum vystavení:</p>
-                    <p class="helv font-11 soft-border date-margin flex-1">${issuedate}</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${date.issue}</p>
                 </div>
                 <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum splatnosti:</p>
-                    <p class="helv font-11 soft-border date-margin flex-1">${duedate}</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${date.due}</p>
                 </div>
                 <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
                         Datum uskutečnění plnění:</p>
-                    <p class="helv font-11 soft-border date-margin flex-1">${date3}</p>
+                    <p class="helv font-11 soft-border date-margin flex-1">${date.ioa}</p>
                 </div>
                 <div class="flex-3 container">
                     <p class="helv font-11 flex-1">
@@ -107,8 +107,15 @@
                     Označení dodávky
                 </p>
             </div>
-            <div class="flex-1 container">
-
+            <div class="flex-1 container pad-5 pad-10-left">
+                <div class="container flex-1">
+                    <div class="container flex-1">
+                        <div class="flex-1 helv font-12 right">Cena</div>
+                        <div class="flex-1 helv font-12 pad-10-left right">%DPH</div>
+                        <div class="flex-1 helv font-12 right">DPH</div>
+                        <div class="flex-1 helv font-12 right pad-10-right">Kč Celkem</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="flex-7 container">
@@ -118,8 +125,33 @@
                 </p>
             </div>
             <div class="flex-1 container-col">
-                <div class="flex-1"></div>
-                <div class="flex-3"></div>
+                <div class="flex-2">
+
+                </div>
+                <div class="flex-1 container">
+                    <div class="flex-1 helv font-10 right">${price.before-vat-0}</div>
+                    <div class="flex-1 helv font-10 right pad-10-left">0</div>
+                    <div class="flex-1 helv font-10 right">${price.vat-0}</div>
+                    <div class="flex-1 helv font-10 right pad-10-right">${price.after-vat-0}</div>
+                </div>
+                <div class="flex-1 container">
+                    <div class="flex-1 helv font-10 right">${price.before-vat-10}</div>
+                    <div class="flex-1 helv font-10 right pad-10-left">10</div>
+                    <div class="flex-1 helv font-10 right">${price.vat-10}</div>
+                    <div class="flex-1 helv font-10 right pad-10-right">${price.after-vat-10}</div>
+                </div>
+                <div class="flex-1 container">
+                    <div class="flex-1 helv font-10 right">${price.before-vat-15}</div>
+                    <div class="flex-1 helv font-10 right pad-10-left">15</div>
+                    <div class="flex-1 helv font-10 right">${price.vat-15}</div>
+                    <div class="flex-1 helv font-10 right pad-10-right">${price.after-vat-15}</div>
+                </div>
+                <div class="flex-1 container">
+                    <div class="flex-1 helv font-10 right">${price.before-vat-21}</div>
+                    <div class="flex-1 helv font-10 right pad-10-left">21</div>
+                    <div class="flex-1 helv font-10 right">${price.vat-21}</div>
+                    <div class="flex-1 helv font-10 right pad-10-right">${price.after-vat-21}</div>
+                </div>
             </div>
         </div>
         <div class="flex-3 container soft-border">
@@ -134,44 +166,70 @@
             <div class="flex-1 container">
                 <div class="flex-1 container-col">
                     <div class="helv font-15 pad-5 pad-10-left flex-1 container">
-                        <div class="flex-1 font-12">${price.totalbefore}</div>
+                        <div class="flex-1 font-12 pad-10-right">${price.totalbefore}</div>
                         <div class="flex-1"></div>
-                        <div class="flex-1 font-12">${price.vattotal}</div>
-                        <div class="flex-1 font-12">${price.total}</div>
+                        <div class="flex-1 font-12 right">${price.vattotal}</div>
+                        <div class="flex-1 font-12 right pad-10-right">${price.total}</div>
                     </div>
                     <div class="helv font-15 pad-10-left flex-1 container">
                         <div class="flex-1"></div>
                         <div class="flex-1"></div>
                         <div class="flex-1"></div>
-                        <div class="flex-1 left font-12"><b>${price.total}</b></div>
+                        <div class="flex-1 font-12 right pad-10-right"><b>${price.total}</b></div>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="flex-3 soft-border">
-asfd
+    <div class="flex-3 soft-border container-col">
+        <div class="flex-5"></div>
+        <div class="flex-1 helv font-8 t-center pad-10-left pad-10-right">
+        Dovolujeme si Vás upozornit, že v případě nedodržení data splatnosti uvedeného na faktuře Vám budeme účtovat úrok z prodlení v dohodnuté, resp. zákonné výši a
+        smluvní pokutu (byla-li sjednána)
+        </div>
     </div>
-    <div class="flex-3 soft-border">
-        body {
-        background: rgb(204,204,204);
-        }
-        page[size="A4"] {
-        background: white;
-        width: 21cm;
-        height: 29.7cm;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 0.5cm;
-        box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-        }
-        @media print {
-        body, page[size="A4"] {
-        margin: 0;
-        box-shadow: 0;
-        }
-        }
+    <div class="flex-3 soft-border container helv font-10 pad-15">
+        <div class="flex-1"></div>
+        <div class="flex-3 pad-15 helv font-10"> Rekapitulace DPH v Kč</div>
+        <div class="flex-2 right container-col">
+            <div class="flex-1"></div>
+            <div class="flex-1">Základ v Kč</div>
+            <div class="flex-1">${price.before-vat-0}</div>
+            <div class="flex-1">${price.before-vat-10}</div>
+            <div class="flex-1">${price.before-vat-15}</div>
+            <div class="flex-1">${price.before-vat-21}</div>
+            <div class="flex-3"></div>
+        </div>
+
+        <div class="flex-1 right container-col">
+            <div class="flex-1"></div>
+            <div class="flex-1">Sazba</div>
+            <div class="flex-1">0%</div>
+            <div class="flex-1">10%</div>
+            <div class="flex-1">15%</div>
+            <div class="flex-1">21%</div>
+            <div class="flex-3"></div>
+        </div>
+        <div class="flex-1"></div>
+        <div class="flex-1 right container-col">
+            <div class="flex-1"></div>
+            <div class="flex-1">DPH v Kč</div>
+            <div class="flex-1"></div>
+            <div class="flex-1">${price.vat-10}</div>
+            <div class="flex-1">${price.vat-15}</div>
+            <div class="flex-1">${price.vat-21}</div>
+            <div class="flex-3"></div>
+        </div>
+        <div class="flex-2 pad-5 right container-col">
+            <div class="flex-1"></div>
+            <div class="flex-1">Celkem s DPH v Kč</div>
+            <div class="flex-1"></div>
+            <div class="flex-1">${price.after-vat-10}</div>
+            <div class="flex-1">${price.after-vat-15}</div>
+            <div class="flex-1">${price.after-vat-21}</div>
+            <div class="flex-3"></div>
+        </div>
     </div>
 </div>
 </page>
